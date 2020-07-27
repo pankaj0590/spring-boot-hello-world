@@ -1,0 +1,6 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: spring-boot-aws-beanstalk-service
