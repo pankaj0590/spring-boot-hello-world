@@ -1,1 +1,1 @@
-# spring-boot-with-aws-beanstalk
+# spring-boot-hello-world
