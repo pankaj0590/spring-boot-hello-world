@@ -15,7 +15,7 @@ public class HomeController {
         @GetMapping(value = "/home")
         public ResponseEntity getMessage(){
 
-            return new ResponseEntity("Hello World with jenkins and github webhook", HttpStatus.OK);
+            return new ResponseEntity("Hello World with jenkins and github webhook ", HttpStatus.OK);
 
         }
 }
