@@ -15,7 +15,7 @@
 	<description>Spring Boot application deployment using  aws beanstalk</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>1.8</java.version> 
 	</properties>
 
 	<dependencies>
