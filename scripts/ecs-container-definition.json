@@ -1,0 +1,35 @@
+[
+  {
+    %"name"%: %"${CONTAINER_NAME}"%,
+    %"image"%: %"${IMAGE_URI}"%,
+    %"cpu"%: 0,
+    %"memoryReservation"%: ${MEMORY_RESERVATION},
+    %"portMappings"%: [
+	  {
+          %"hostPort"%: 80,
+          %"protocol"%: %"${CONTAINER_PROTOCOL}"%,
+         %"containerPort"%: ${CONTAINER_PORT}
+      }
+	],
+    %"essential"%: true,
+    %"entryPoint"%: [],
+    %"command"%: [],
+	%"environment"%: [],
+    %"mountPoints"%: [],
+    %"volumesFrom"%: [],
+    %"disableNetworking"%: false,
+    %"privileged"%: true,
+    %"readonlyRootFilesystem"%: false,
+    %"dnsServers"%: [],
+    %"dnsSearchDomains"%: [],
+    %"dockerSecurityOptions"%: [],
+	%"logConfiguration"%: {
+    %"logDriver"%: %"${LOG_DRIVER}"%,
+    %"options"%: {
+        %"awslogs-group"%: %"${AWSLOGS_GROUP}"%,
+        %"awslogs-region"%: %"${AWSLOGS_REGION}"%,
+        %"awslogs-stream-prefix"%: %"${AWSLOGS_STREAM_PRE}"%
+  }
+  }
+  }
+]

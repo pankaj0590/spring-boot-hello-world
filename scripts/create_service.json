@@ -1,0 +1,16 @@
+{
+    %"serviceName"%: %"${SERVICE_NAME}"%,
+    %"taskDefinition"%: %"${TASK_DEFINITION}"%,
+    %"cluster"%: %"${CLUSTER}"%,
+    %"desiredCount"%: ${DESIRED_COUNT},
+    %"loadBalancers"%: [
+	  {
+          %"targetGroupArn"%: %"$TARGET_GROUP_ARN"%,
+          %"containerName"%: %"${CONTAINER_NAME}"%,
+         %"containerPort"%: ${CONTAINER_PORT}
+      }
+	],
+    %"launchType"%: %"${LAUNCH_TYPE}"%,
+    %"schedulingStrategy"%: %"${SCHD_STRATEGY}"%,
+    %"healthCheckGracePeriodSeconds"%: ${GRACE_PERIOD}
+}
