@@ -1,5 +1,5 @@
 aws_repository|757681645441.dkr.ecr.us-east-1.amazonaws.com/dev-spring-boot-hello-world
-ecs_aws_profile|AKIA3A2KYM6ASDVUXBES
+ecs_aws_profile|default
 service-name|dev-spring-boot-hello-world-service
 task-definition|dev-spring-boot-hello-world-task
 container-port|8000
