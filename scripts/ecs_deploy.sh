@@ -56,7 +56,7 @@ fi
 
 if [ -z "$AWS_PROFILE" ]; then
     echo "No AWS profile supplied using default"
-    aws_profile=default
+    aws_profile=AKIA3A2KYM6ASDVUXBES
 fi
 
 AWS="/usr/bin/aws --profile $AWS_PROFILE"
