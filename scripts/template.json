@@ -3,14 +3,14 @@
     "placementConstraints": [],
     "volumes": [],
     "requiresCompatibilities": [
-        "EC2"
+        "FARGATE"
     ],
     "containerDefinitions": [
         {
             "memoryReservation": 128,
             "name": "spring-boot-hello-world",
             "mountPoints": [],
-            "image": "757681645441.dkr.ecr.us-east-1.amazonaws.com/dev-spring-boot-hello-world",
+            "image": "757681645441.dkr.ecr.us-east-1.amazonaws.com/dev-spring-boot-hello-world:latest",
             "essential": true,
             "portMappings": [
                 {
