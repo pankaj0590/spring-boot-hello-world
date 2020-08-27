@@ -10,7 +10,7 @@
             "memoryReservation": 128,
             "name": "jenkins-test",
             "mountPoints": [],
-            "image": "DOCKER_IMAGE_NAME",
+            "image": "757681645441.dkr.ecr.us-east-1.amazonaws.com/dev-spring-boot-hello-world",
             "essential": true,
             "portMappings": [
                 {
