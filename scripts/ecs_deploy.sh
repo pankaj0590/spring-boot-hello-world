@@ -59,7 +59,7 @@ if [ -z "$AWS_PROFILE" ]; then
     aws_profile=AKIA3A2KYM6ASDVUXBES
 fi
 
-AWS="/usr/bin/aws --profile $AWS_PROFILE"
+AWS="/usr/local/bin/aws --profile $AWS_PROFILE"
 DOCKER_LOGIN=$($AWS ecr get-login --no-include-email)
 set -x
 
