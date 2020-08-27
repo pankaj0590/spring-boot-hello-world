@@ -1,5 +1,5 @@
 {
-    "family": "jenkins-test",
+    "family": "spring-boot-hello-world",
     "placementConstraints": [],
     "volumes": [],
     "requiresCompatibilities": [
@@ -8,7 +8,7 @@
     "containerDefinitions": [
         {
             "memoryReservation": 128,
-            "name": "jenkins-test",
+            "name": "spring-boot-hello-world",
             "mountPoints": [],
             "image": "757681645441.dkr.ecr.us-east-1.amazonaws.com/dev-spring-boot-hello-world",
             "essential": true,
@@ -24,7 +24,7 @@
                 "options": {
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "test",
-                    "awslogs-group": "/ecs/jenkins-test"
+                    "awslogs-group": "/ecs/spring-boot-hello-world"
                 }
             },
             "memory": 1024,
