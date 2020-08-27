@@ -7,7 +7,7 @@ dockerRepo=`aws ecr describe-repositories --repository-name dev-spring-boot-hell
 dockerTag=`aws ecr list-images --repository-name dev-spring-boot-hello-world --region us-east-1 | grep imageTag | head -n 1 | cut -d "\"" -f 4`
 sed -e "s;DOCKER_IMAGE_NAME;${repositoryURI};g" scripts/template.json > taskDefinition.json
 aws ecs create-cluster --cluster-name aws-ec2-cluster
-aws ecs create-service --cluster aws-ec2-cluster --service-name spring-boot-hello-world-service --task-definition spring-boot-hello-world-task ,containerName=spring-boot-hello-world,containerPort=8080 --role ecs-service-role --desired-count 0
+aws ecs create-service --cluster aws-ec2-cluster --service-name spring-boot-hello-world-service --task-definition spring-boot-hello-world-task --desired-count 1
 aws ecs register-task-definition --family spring-boot-hello-world --cli-input-json file://taskDefinition.json --region us-east-1
 revision=`aws ecs describe-task-definition --task-definition jenkins-test --region us-east-1 | grep "revision" | tr -s " " | cut -d " " -f 3`
 aws ecs update-service --cluster aws-ec2-cluster --service spring-boot-hello-world-service --task-definition spring-boot-hello-world-task:${revision} --desired-count 1
