@@ -60,7 +60,7 @@ if [ -z "$AWS_PROFILE" ]; then
 fi
 
 AWS="/usr/local/bin/aws --profile $AWS_PROFILE"
-DOCKER_LOGIN=$($AWS ecr get-login --no-include-email)
+DOCKER_LOGIN=$($AWS aws ecr get-login-password --region us-east-1)
 set -x
 
 eval $DOCKER_LOGIN
